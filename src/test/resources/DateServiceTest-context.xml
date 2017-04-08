@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+  <!--httpInvoker client-->
+  <bean id="httpDateService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+    <property name="serviceUrl" value="http://localhost:8080/remoting/remote/HttpDateService.service" />
+    <property name="serviceInterface" value="com.lyz.springremoting.http.HttpDateService" />
+  </bean>
+  <!--rmi client-->
+  <bean id="rmiDateService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+    <property name="serviceUrl" value="rmi://localhost:1099/remote/RmiDateService.service" />
+    <property name="serviceInterface" value="com.lyz.springremoting.rmi.RmiDateService" />
+  </bean>
+  <!--hessian client-->
+  <bean id="hessianDateService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl" value="http://localhost:8080/remoting/remote/HessianDateService.service" />
+    <property name="serviceInterface" value="com.lyz.springremoting.hessian.HessianDateService" />
+  </bean>
+  <!--burlap client-->
+  <bean id="burlapDateService" class="org.springframework.remoting.caucho.BurlapProxyFactoryBean">
+    <property name="serviceUrl" value="http://localhost:8080/remoting/remote/BurlapDateService.service" />
+    <property name="serviceInterface" value="com.lyz.springremoting.burlap.BurlapDateService" />
+  </bean>
+
+</beans>
