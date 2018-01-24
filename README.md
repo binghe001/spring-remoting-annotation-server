@@ -1,9 +1,9 @@
-###作者简介:
+### 作者简介:
 刘亚壮   高级软件架构师   精通大数据与分布式系统架构设计与研发   精通Android底层与应用层架构设计与框架研发    精通NIO、AIO与Netty开发   精通分布式数据库中间件   国内知名分布式数据库中间件Mycat核心Committer
 
-###用法
-###先使用jetty启动web服务，再通过客户端调用
-###创建测试类ServerRunner
+### 用法
+### 先使用jetty启动web服务，再通过客户端调用
+### 创建测试类ServerRunner
 
 package cn.lyz.spring.rpc.annotation.demo;
 
@@ -47,7 +47,7 @@ public class ServerRunner {
 	}
 }
 
-###创建测试类UserServiceTest.java
+### 创建测试类UserServiceTest.java
 package cn.lyz.spring.rpc.annotation.demo;
 
 import org.junit.Test;
