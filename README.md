@@ -5,6 +5,7 @@
 ### 先使用jetty启动web服务，再通过客户端调用
 ### 创建测试类ServerRunner
 
+```
 package cn.lyz.spring.rpc.annotation.demo;
 
 import org.eclipse.jetty.server.Connector;
@@ -46,8 +47,10 @@ public class ServerRunner {
 		server.stop();
 	}
 }
+```
 
 ### 创建测试类UserServiceTest.java
+```
 package cn.lyz.spring.rpc.annotation.demo;
 
 import org.junit.Test;
@@ -65,3 +68,4 @@ public class UserServiceTest extends ServerRunner{
 	    System.out.println(userService.getUser("slim"));
 	  }
 }
+```
